@@ -1,0 +1,29 @@
+{
+  "name": "crt7-iot",
+  "version": "1.0.0",
+  "description": "smart camera",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon --inspect src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "tung",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.5",
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.7.7",
+    "https": "^1.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "node-popup": "^0.1.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
