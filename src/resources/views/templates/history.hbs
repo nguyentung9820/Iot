@@ -1,0 +1,113 @@
+<style>
+  th, tr{
+    color: white;
+  }
+</style>
+{{!-- <select id="month">
+  <option value="1">1</option>
+  <option value="1">2</option>
+  <option value="1">3</option>
+  <option value="1">4</option>
+  <option value="1">5</option>
+  <option value="1">6</option>
+  <option value="1">7</option>
+  <option value="1">8</option>
+  <option value="1">9</option>
+  <option value="1">10</option>
+  <option value="1">11</option>
+  <option value="1">12</option>
+
+</select> --}}
+<a href="/"><button style="margin-bottom: 10px;" type="button" class="btn btn-secondary" action=>Back</button></a>
+<table class="table table-striped custom-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Employee</th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                        <th>6</th>
+                                        <th>7</th>
+                                        <th>8</th>
+                                        <th>9</th>
+                                        <th>10</th>
+                                        <th>11</th>
+                                        <th>12</th>
+                                        <th>13</th>
+                                        <th>14</th>
+                                        <th>15</th>
+                                        <th>16</th>
+                                        <th>17</th>
+                                        <th>18</th>
+                                        <th>19</th>
+                                        <th>20</th>
+                                        <th>22</th>
+                                        <th>23</th>
+                                        <th>24</th>
+                                        <th>25</th>
+                                        <th>26</th>
+                                        <th>27</th>
+                                        <th>28</th>
+                                        <th>29</th>
+                                        <th>30</th>
+                                        <th>31</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  {{#each members}}
+                                    <tr id="{{this._id}}">
+                                    </tr>
+                                    <script>
+                                          var first = []
+                                          var last = []
+                                          var new_id = []
+                                          var date_checkin = []
+                                          var id = "{{this._id}}"
+                                          var tr = document.getElementById(id)
+                                          var name = "{{this.username}}"
+                                          var url = "/member/view/" + id
+                                          tr.insertAdjacentHTML('beforeend', '<td><a href="'+url+'">'+ name +'</a></td>')
+                                    </script>
+                                    {{#each this.data}}
+                                    <script>
+                                          var tmp = "{{this.dateCheckin}}".split('/')[0]
+                                          new_id[tmp] = "{{this._id}}"
+                                          date_checkin[tmp] ="{{this.dateCheckin}}"
+                                          first[tmp] = "{{this.timeCheckin.first}}"
+                                          last[tmp] = "{{this.timeCheckin.last}}"
+                                    </script>
+                                  
+                                    {{/each}}
+                                    <script>
+                                      for(var i = 1; i < 31; i++){
+                                          if(date_checkin[i] != null){
+                                            number = parseInt(date_checkin[i].split('/')[0])
+                                            if( number == i ){
+                                              if(last[i] != undefined){
+                                                tr.insertAdjacentHTML('beforeend', '<td><div class="half-day"><span class="first-off"><i class="fa fa-check text-success"></i></span> <span class="first-off"><i class="fa fa-check text-success"></i></span></div></td>')
+                                              }else{
+                                                tr.insertAdjacentHTML('beforeend', '<td><div class="half-day"><span class="first-off"><i class="fa fa-check text-success"></i></span> <span class="first-off"><i class="fa fa-close text-danger"></i></span></div></td>')
+                                              }
+
+                                            }else{
+                                                tr.insertAdjacentHTML('beforeend', '<td><div class="half-day"><span class="first-off"><i class="fa fa-close text-danger"></i></span> <span class="first-off"><i class="fa fa-close text-danger"></i></span></div></td>')
+                                            }
+                                          }else{
+                                                tr.insertAdjacentHTML('beforeend', '<td><div class="half-day"><span class="first-off"><i class="fa fa-close text-danger"></i></span> <span class="first-off"><i class="fa fa-close text-danger"></i></span></div></td>')
+                                          }
+                                          }
+                                    </script>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+
+    <style>
+    body{
+            background-color: black;
+
+    }
+        
+    </style>
+      {{!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> --}}

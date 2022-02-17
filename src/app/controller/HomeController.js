@@ -14,6 +14,16 @@ class HomeController {
             });
         }) 
     }
+    // [GET] /
+    history(req, res){
+        Member.find({})
+        .then(members => {
+            res.render('templates/history', { 
+                members: mutipleMongooseToObject(members),
+                layout: 'home' 
+            });
+        }) 
+    }
 
 }
 

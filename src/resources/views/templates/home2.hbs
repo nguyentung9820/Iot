@@ -23,7 +23,7 @@
           // var c = document.getElementById('1');
           // var t = c.getContext();
           if(a%2 == 1){
-            document.getElementById('myVideo').insertAdjacentHTML("beforeend", '<iframe id="video-frame" width="800px" height="600px" src="http://192.168.1.9:8888" frameborder="0" allowfullscreen></iframe>');
+            document.getElementById('myVideo').insertAdjacentHTML("beforeend", '<iframe id="video-frame" width="800px" height="600px" src="http://192.168.1.11:9820" frameborder="0" allowfullscreen></iframe>');
             document.getElementById('action-btn').value= "Turn Off";
             a++
           } else {
@@ -58,6 +58,8 @@
           <h2 class="w3-text-light-grey">Members</h2>
           <hr style="width:200px" class="w3-opacity">
           <a href="/member/add"><button type="button" style="margin-bottom: 20px;" class="btn btn-primary" action=>Add Member</button></a>
+          <a href="/history"><button type="button" style="margin-bottom: 20px;" class="btn btn-success" action=>History</button></a>
+
           <div class="w3-section">
             
             {{#each members}}
@@ -70,8 +72,8 @@
         <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
           <h2 class="w3-text-light-grey">Description of the topic</h2>
           <hr style="width:200px" class="w3-opacity">
-          <h3 id='1'>Detection</h3>
-            <p>The detection objective refers to the capacity of a camera, whatever the type, to detect a change in the captured image. It can be a car, a person or an animal. There are cameras that detect movements at 20 meters and others that detect them at 200 meters depending on the type of camera or the focal length of the lens being used. Detection is a basic feature of the video surveillance system that in many cases must be reinforced with additional capabilities that allow adequate decision making by the user or operator of the video surveillance system.</p>
+          <h3 id='1'>Attendance</h3>
+            <p>We provide a system to help your member get attendance as fast as possible by face. By the way, at this time, we are facing with outbreak of disease so we need an system not only solve the bussiness's problem but also protect us from covid-19</p>
             
          <h3>Recognition</h3>
             <p>In the face of detection, when we indicate that an image allows recognition we want to indicate that it is possible to discern whether it is a person, a vehicle or an animal in a reliable way.
@@ -83,7 +85,7 @@
         
         </div>
         <div class="w3-padding-64 w3-content" id="photos">
-          <h2 class="w3-text-light-grey">Detected Photos</h2>
+          <h2 class="w3-text-light-grey">About Us</h2>
           <hr style="width:200px" class="w3-opacity">  
           <div class="w3-row-padding" style="margin:0 -16px">
             <div id='img' class="w3-half">

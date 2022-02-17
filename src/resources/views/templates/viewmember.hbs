@@ -105,12 +105,25 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">History</h6>
+                      <h6 class="mb-0">Date</h6>
                     </div>
-                    <div class="col-sm-9 text-secondary">{{this.username}}</div>
+                    <div class="col-sm-3 text-secondary">Check In</div>
+                    <div class="col-sm-3 text-secondary">Check Out</div>
                   </div>
                   <hr>
+                  {{#each this.data}}
                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">{{this.dateCheckin}}</h6>
+                    </div>
+                    {{#each this}}
+                    <div class="col-sm-3 text-secondary">{{this.first}}</div>
+                    <div class="col-sm-3 text-secondary">{{this.last}}</div>
+                    {{/each}}
+                  </div>
+                  <hr>
+                  {{/each}}
+                  {{!-- <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Email</h6>
                     </div>
@@ -135,7 +148,7 @@
                     <div class="col-sm-9 text-secondary">
                         {{this.address}}
                     </div>
-                  </div>
+                  </div> --}}
                   {{!-- <hr>
                   <hr>
                   <div class="row">
